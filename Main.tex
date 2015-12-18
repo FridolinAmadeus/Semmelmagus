@@ -1,0 +1,144 @@
+\documentclass[11pt,a4paper]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage{tgschola}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+%\usepackage[a4paper, total={5.5in, 8in}]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+% -- Mathe
+%\usepackage{gensymb}
+%fancyhdr, lastpage, booktabs, xy
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{marginnote}
+\usepackage{MnSymbol}
+
+% -- Malen
+\usepackage{tikz}
+\usetikzlibrary{patterns, decorations.pathreplacing, arrows}
+\usepackage{units}
+
+\author{Paul \textsc{Schwahn}, Jann \textsc{van der Meer}}
+\title{De theoria arcana}
+\date{Ein Skript zur Magietheorie, \today}
+
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter
+\newcommand{\xeq}[2][]{\ensuremath{\overset{\mathclap
+{\scriptscriptstyle{#2}}}{\underset{\mathclap{#1}}{=}}}}
+\newcommand{\xleq}[2][]{\ensuremath{\overset{\mathclap
+{\scriptscriptstyle{#2}}}{\underset{\mathclap{#1}}{\leq}}}}
+\newcommand{\leqnomode}{\tagsleft@true\let\veqno\@@leqno}
+\newcommand{\reqnomode}{\tagsleft@false\let\veqno\@@eqno}
+\makeatother
+
+
+\newcommand{\thistheoremname}{}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\A}{\:\:\forall}
+\newcommand{\E}{\:\:\exists}
+
+\newcommand{\su}{\subseteq}
+\newcommand{\us}{\supseteq}
+\newcommand{\ot}{\leftarrow}
+\newcommand{\To}{\implies}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Bild}{\operatorname{Bild}}
+\newcommand{\Res}{\operatorname{Res}}
+
+\newcommand{\e}{\text{\rmfamily e}}
+\renewcommand{\i}{\text{\rmfamily i}}
+
+\newcommand{\egn}{\varepsilon > 0}
+\newcommand{\de}{\delta_\varepsilon}
+\newcommand{\Ne}{\N_\varepsilon}
+
+\newcommand{\tdb}{differenzierbar}
+\newcommand{\tdbl}{differenzierbar }
+\newcommand{\td}[1]{\text{\rmfamily d} #1}
+
+\newcommand{\diff}[3][]{\frac{\text{\rmfamily d}^{#1} #2}{\text{\rmfamily d} #3^{#1}}}
+\newcommand{\piff}[3][]{\frac{\partial^{#1} #2}{\partial #3 ^{#1}}}
+\newcommand{\fehler}[3][]{\left| \piff[#1]{#2}{#3} \right| * \Delta #3}
+
+
+%`Text` im Mathemodus
+\mathcode`\`="8000
+\begingroup
+\uccode`\~`\`
+\uppercase{%
+\endgroup
+\def~#1`{\ \text{#1} \ }}
+%Malpunkte
+\mathcode`\*="8000
+{\catcode`\*\active\gdef*{\cdot}}
+%Punkte zu Kommata
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}
+
+
+\newtheoremstyle{paris}
+  {\topsep}% Platzhalter nach oben
+  {\topsep}% Platzhalter nach unten
+  {\normalfont}% Schriftart im Theoremkörper
+  {-25pt}% Seitlicher Einschub
+  {\bfseries}% Schriftart in der Theoremüberschrift
+  {:\\}% Punkt zwischen Überschrift und Körper
+  {5pt plus 1pt minus 1pt}% Platz nach überschrift mit 2pt Ausweichvermögen
+  {}% Spezifikationen
+
+\swapnumbers
+\theoremstyle{paris}
+\newtheorem{df}{Definition}[chapter]
+\newtheorem{sz}[df]{Satz}
+\newtheorem{genericthm}[df]{\thistheoremname}
+\newtheorem{bsp}[df]{Beispiel}
+\newenvironment{bw}[1][\textbf{Beweis}]{\begin{proof}[#1]}{\end{proof}}
+
+%Bedienung: \begin{bla}{Satz von Horst}
+\newenvironment{bla}[1]
+{\renewcommand{\thistheoremname}{#1}\begin{genericthm}}{\end{genericthm}}
+
+%----TEST-Kram----
+
+\def\mathnote#1{%
+  \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{%
+  \footnotesize#1}}}}
+}
+\def\lmathnote#1{%
+  \leqnomode%
+  \tag*{\llap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{%
+  \footnotesize#1}}}}%
+  \reqnomode
+}
+
+%----Dokument----
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\part{Empirice magica}
+\part{Viae mathematicae artis magicae}
+\part{Metaphysica theoretica}
+\part{Implicationes arcanobiologicae}
+%\input{}\clearpage
+
+\end{document}
