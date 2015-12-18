@@ -1,10 +1,13 @@
-\documentclass[11pt,a4paper]{scrbook}
+\documentclass[11pt,a4paper,headings=optiontohead]{scrbook}
 \usepackage[utf8]{inputenc}
 \usepackage{tgschola}
+\usepackage{tgothic}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 %\usepackage[a4paper, total={5.5in, 8in}]{geometry}
 \usepackage[onehalfspacing]{setspace}
+\usepackage{anyfontsize}
+\usepackage{tocloft}
 
 % -- Mathe
 %\usepackage{gensymb}
@@ -25,12 +28,15 @@
 \usetikzlibrary{patterns, decorations.pathreplacing, arrows}
 \usepackage{units}
 
-\author{Paul \textsc{Schwahn}, Jann \textsc{van der Meer}}
-\title{De theoria arcana}
-\date{Ein Skript zur Magietheorie, \today}
+%\renewcommand{\familydefault}{\rmdefault}
 
-
-%\renewcommand{\familydefault}{\sfdefault}
+%----Inhaltsverzeichnis- und Überschriftenformatierung----
+\setkomafont{disposition}{\tgothfamily}
+\renewcommand{\cfttoctitlefont}{\rmfamily\Large\bfseries}
+\renewcommand{\cftpartfont}{\rmfamily\bfseries}
+\renewcommand{\cftpartpagefont}{\rmfamily\bfseries}
+\renewcommand{\cftchapfont}{\rmfamily}
+\renewcommand{\cftchappagefont}{\rmfamily}
 
 \makeatletter
 \newcommand{\xeq}[2][]{\ensuremath{\overset{\mathclap
@@ -40,7 +46,6 @@
 \newcommand{\leqnomode}{\tagsleft@true\let\veqno\@@leqno}
 \newcommand{\reqnomode}{\tagsleft@false\let\veqno\@@eqno}
 \makeatother
-
 
 \newcommand{\thistheoremname}{}
 
@@ -55,7 +60,9 @@
 \newcommand{\su}{\subseteq}
 \newcommand{\us}{\supseteq}
 \newcommand{\ot}{\leftarrow}
-\newcommand{\To}{\implies}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\Ot}{\Leftarrow}
+\newcommand{\Oto}{\Leftrightarrow}
 
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
@@ -78,7 +85,6 @@
 \newcommand{\piff}[3][]{\frac{\partial^{#1} #2}{\partial #3 ^{#1}}}
 \newcommand{\fehler}[3][]{\left| \piff[#1]{#2}{#3} \right| * \Delta #3}
 
-
 %`Text` im Mathemodus
 \mathcode`\`="8000
 \begingroup
@@ -91,7 +97,6 @@
 {\catcode`\*\active\gdef*{\cdot}}
 %Punkte zu Kommata
 \DeclareMathSymbol{.}{\mathord}{letters}{"3B}
-
 
 \newtheoremstyle{paris}
   {\topsep}% Platzhalter nach oben
@@ -131,7 +136,15 @@
 %----Dokument----
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+\centering
+\phantom{Semmelmagus}
+\vspace{5cm}
+{\tgothfamily\fontsize{60}{72}\selectfont De theoria arcana\par}
+\vspace{1cm}
+{\Large Paul \textsc{Schwahn}, Jann \textsc{van der Meer}\par}
+\vfill
+\end{titlepage}
 \tableofcontents
 \clearpage
 
