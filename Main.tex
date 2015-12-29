@@ -85,6 +85,15 @@
 \newcommand{\piff}[3][]{\frac{\partial^{#1} #2}{\partial #3 ^{#1}}}
 \newcommand{\fehler}[3][]{\left| \piff[#1]{#2}{#3} \right| * \Delta #3}
 
+%ä, ö, ü in Kapitelüberschriften
+\newcommand{\aech}{a\kern-0.17em{e}}
+\newcommand{\oech}{o\kern-0.13em{e}}
+\newcommand{\uech}{u\kern-0.17em{e}}
+%ä, ö, ü in Abschnittsüberschriften
+\newcommand{\aese}{a\kern-0.22em{e}}
+\newcommand{\oese}{o\kern-0.18em{e}}
+\newcommand{\uese}{u\kern-0.22em{e}}
+
 %`Text` im Mathemodus
 \mathcode`\`="8000
 \begingroup
@@ -150,51 +159,9 @@
 
 \part{Empirice magica}
 \part{Viae mathematicae artis magicae}
-\section{Unwahrscheinlichkeitskalk"ul}
-"\ [Es ist] einer der graverienden Fehler derer, die einer theoria magica ablehnend gegen"uberstehen, anzunehmen, das Eintreten eines magischen Ereignisses sei im Sinne einer Axiomatisierung der nichtmagischen Naturtheorie unm"oglich. [...] Ich aber sage euch, dass [das Auftreten] eines [magischen] Ereignisses lediglich eine Frage der \textit{Unwahrscheinlichkeit}, nicht jedoch der \textit{Unm"oglichkeit} ist. Eine [konsistente] theoria magica enth"alt die [nichtmagische Naturtheorie] als Limes der infinitesimalen ... [\textit{Rest unleserlich}]"\\
-(Zit. aus "Rohals Apokryphen", Universit"atsbibliothek zu Punin)\\
-
-Inwiefern Rohal bereits den Formalismus des Unwahrscheinlichkeitskalk"uls kannte, bleibt unklar. Er hat jedoch bereits die Begriffe der Unwahrscheinlichkeit und der Unwahrscheinlichkeitsamplitude definiert, also folgen wir hier Rohal.
-
-\begin{bla}{Definition: Unwahrscheinlichkeit u}
-Unter der Unwahrscheinlichkeit eines Ereignisses \textbf{E} versteht man den Kehrwert seiner Wahrscheinlichkeit:\\
-\begin{align}
-u(\textbf{E}) = \frac{1}{P(\textbf{E})}
-\end{align}
-\end{bla}
-\begin{bla}{Definition: Unwahrscheinlichkeitsamplitude U}
-Die Unwahrscheinlichkeitsamplitude U eines Ereignisses E ist definiert als:
-\begin{align}
-U(\textbf{E}) = \ln{u(\textbf{E})}
-\end{align}
-\end{bla}
-\begin{bla}{Bemerkungen}
-F"ur die Wertebereiche der Gr"oßen gilt \footnote{Hierbei stehe \textbf{E} f"ur ein tats"achlich m"ogliches Ereignis mit $P(\textbf{E}) > 0$, denn wie Rohal thematisieren wir hier die unwahrscheinlichen, nicht die unm"oglichen Ereignisse.}
-\begin{itemize}
-\item $P(\textbf{E}) \in ]0;1]$
-\item $U(\textbf{E}) \in [1;\infty[$
-\item $U(\textbf{E}) \in [0;\infty[$
-\end{itemize}
-\end{bla}
-\begin{bla}{Bemerkungen}
-Trivialerweise gelten zwischen den Gr"oßen die folgenden Beziehungen:
-\begin{itemize}
-\item $U(\textbf{E}) = - \ln P(\textbf{E})$
-\item $u(\textbf{E}) = e ^ {U(\textbf{E})}$
-\item $P(\textbf{E}) = u(\textbf{E}) ^{-1} = e ^{-u(\textbf{E})}$
-\end{itemize}
-\end{bla}
-\begin{bla}{Definition: Rohal-Negentropie R(\textbf{E})}
-\begin{align}
-R(\textbf{E}) := k_R * U(\textbf{E})
-\end{align}
-Hierbei ist $k_R$ die Rohal-Konstante.
-\end{bla}
-
-
+\input{Part2/01_Unwahrscheinlichkeitskalkuel.tex}\clearpage
 \part{Metaphysica theoretica}
 \part{Implicationes arcanobiologicae}
-
 
 %\input{}\clearpage
 

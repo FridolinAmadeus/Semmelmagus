@@ -1,0 +1,41 @@
+\chapter[tocentry=Unwahrscheinlichkeitskalkül, head=Unwahrscheinlichkeitskalkül]{Unwahrscheinlichkeitskalk\uech l}
+"`[Es ist] einer der gravierenden Fehler derer, die einer theoria magica ablehnend gegenüberstehen, anzunehmen, das Eintreten eines magischen Ereignisses sei im Sinne einer Axiomatisierung der nichtmagischen Naturtheorie unmöglich. [...] Ich aber sage euch, dass [das Auftreten] eines [magischen] Ereignisses lediglich eine Frage der \emph{Unwahrscheinlichkeit}, nicht jedoch der \emph{Unmöglichkeit} ist. Eine [konsistente] theoria magica enthält die [nichtmagische Naturtheorie] als Limes der infinitesimalen ... [\textit{Rest unleserlich}]"' (Zit. aus "`\emph{Rohals Apokryphen}"', Universitätsbibliothek zu Punin)
+
+Inwiefern \textsc{Rohal} bereits den Formalismus des Unwahrscheinlichkeitskalküls kannte, bleibt unklar. Er hat jedoch bereits die Begriffe der Unwahrscheinlichkeit und der Unwahrscheinlichkeitsamplitude definiert, also folgen wir hier \textsc{Rohal}.
+\begin{bla}{Vorbemerkungen}
+Im Folgenden sei stets ein beliebiger Wahrscheinlichkeitsraum $(\Omega,\mathcal{A},P)$ gegeben, d. h. ein Grundraum $\Omega$ aus Elementarereignissen mit einer $\sigma$-Algebra $\mathcal{A}$ über $\Omega$ und einem auf $\mathcal{A}$ definierten Wahrscheinlichkeitsmaß $P$. Als \emph{Ereignis} bezeichnen wir ein Element von $\mathcal{A}$.
+\end{bla}
+\begin{bla}{Definition: Unwahrscheinlichkeit $u$}
+Unter der \emph{Unwahrscheinlichkeit} eines Ereignisses \textbf{E} versteht man den Kehrwert seiner Wahrscheinlichkeit:\\
+\begin{equation}
+I(\textbf{E}) := \frac{1}{P(\textbf{E})}
+\end{equation}
+Somit erhält man den \emph{Unwahrscheinlichkeitsraum} $(\Omega,\mathcal{A},I)$.
+\end{bla}
+\begin{bla}{Definition: Unwahrscheinlichkeitsamplitude $U$}
+Die \emph{Unwahrscheinlichkeitsamplitude} $A$ eines Ereignisses \textbf{E} ist definiert als:
+\begin{equation}
+A(\textbf{E}) := \ln{I(\textbf{E})}
+\end{equation}
+\end{bla}
+\begin{bla}{Bemerkungen}
+Für die Wertebereiche der Größen gelten\footnote{Hierbei stehe \textbf{E} für ein tatsächlich mögliches Ereignis mit $P(\textbf{E}) > 0$, denn wie Rohal thematisieren wir hier die unwahrscheinlichen, nicht die unmöglichen Ereignisse.}:
+\begin{itemize}
+\item $P(\textbf{E}) \in ]0,1]$
+\item $I(\textbf{E}) \in [1,\infty[$
+\item $I(\textbf{E}) \in [0,\infty[$
+\end{itemize}
+Weiterhin gelten zwischen den Größen trivialerweise die folgenden Beziehungen:
+\begin{itemize}
+\item $I(\textbf{E}) = - \ln P(\textbf{E})$
+\item $I(\textbf{E}) = \e ^ {A(\textbf{E})}$
+\item $P(\textbf{E}) = I(\textbf{E}) ^{-1} = \e ^{-A(\textbf{E})}$
+\end{itemize}
+\end{bla}
+\begin{bla}{Definition: \textsc{Rohal}-Negentropie $R(\textbf{E})$}
+Sei \textbf{E} ein Ereignis.
+\begin{equation}
+R(\textbf{E}) := k_\text{R} * A(\textbf{E})
+\end{equation}
+heißt \emph{\textsc{Rohal}-Negentropie} von \textbf{E}. Hierbei bezeichne $k_\text{R}$ die \textsc{Rohal}-Konstante.
+\end{bla}
