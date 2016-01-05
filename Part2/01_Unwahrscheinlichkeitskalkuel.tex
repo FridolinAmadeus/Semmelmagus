@@ -1,5 +1,5 @@
 \chapter[tocentry=Unwahrscheinlichkeitskalkül, head=Unwahrscheinlichkeitskalkül]{Unwahrscheinlichkeitskalk\uech l}
-"`[Es ist] einer der gravierenden Fehler derer, die einer \emph{theoria magica} ablehnend gegenüberstehen, anzunehmen, das Eintreten eines magischen Ereignisses sei im Sinne einer Axiomatisierung der nichtmagischen Naturtheorie unmöglich. [...] Ich aber sage euch, dass [das Auftreten] eines [magischen] Ereignisses lediglich eine Frage der \emph{Unwahrscheinlichkeit}, nicht jedoch der \emph{Unmöglichkeit} ist. Eine [konsistente] theoria magica enthält die [nichtmagische Naturtheorie] als Limes der infinitesimalen\ldots [\textit{Rest unleserlich}]"' (Zit. aus "`\emph{Rohals Apokryphen}"', Universitätsbibliothek zu Punin)
+"`[Es ist] einer der gravierenden Fehler derer, die einer \emph{theoria magica} ablehnend gegenüberstehen, anzunehmen, das Eintreten eines magischen Ereignisses sei im Sinne einer Axiomatisierung der nichtmagischen Naturtheorie unmöglich. [...] Ich aber sage euch, dass [das Auftreten] eines [magischen] Ereignisses lediglich eine Frage der \emph{Unwahrscheinlichkeit}, nicht jedoch der \emph{Unmöglichkeit} ist. Eine [konsistente] theoria magica enthält die [nichtmagische Naturtheorie] als Limes der infinitesimalen\ldots [\textit{Rest unleserlich}]"' \cite{apokryphen}
 
 Inwiefern \textsc{Rohal} bereits den Formalismus des Unwahrscheinlichkeitskalküls kannte, bleibt unklar. Er hat jedoch bereits die Begriffe der Unwahrscheinlichkeit und der Unwahrscheinlichkeitsamplitude definiert, also folgen wir hier \textsc{Rohal}.
 \begin{bla}{Vorbemerkungen}
@@ -28,10 +28,11 @@ Für die Wertebereiche der Größen gelten\footnote{Hierbei stehe \textbf{E} fü
 \end{itemize}
 Weiterhin gelten zwischen den Größen trivialerweise die folgenden Beziehungen:
 \begin{itemize}
-\item $I(\textbf{E}) = - \ln P(\textbf{E})$
+\item $A(\textbf{E}) = - \ln P(\textbf{E})$
 \item $I(\textbf{E}) = \e ^ {A(\textbf{E})}$
 \item $P(\textbf{E}) = I(\textbf{E}) ^{-1} = \e ^{-A(\textbf{E})}$
 \end{itemize}
+Die Unwahrscheinlichkeitsamplitude kann auch als Informationsgehalt eines Ereignisses interpretiert werden \cite{informationstheorie}.
 \end{bla}
 \begin{bsp}
 Der Wahrscheinlichkeitsraum sei $([0,1],\mathcal{B}([0,1]),\lambda)$. Hierbei ist $\mathcal{B}([0,1])$ die \textsc{Borelius}-$\sigma$-Algebra über $[0,1]$ und $\lambda$ das \textsc{Lebexosch}-Maß auf $\mathcal{B}([0,1])$. Dies ist tatsächlich ein Wahrscheinlichkeitsmaß, da es $\sigma$-additiv ist und $\lambda([0,1])=1$. Das zugehörige Unwahrscheinlichkeitsmaß sei $I_\lambda$, sowie die Unwahrscheinlichkeitsamplitude $A_\lambda$. Dann ist beispielsweise für ein beliebiges, nichtleeres Intervall $[a,b]\su[0,1]$
@@ -45,7 +46,7 @@ A_\lambda([a,b])&=\ln{I_\lambda([a,b])}=-\ln(b-a)\text{.}
 \begin{bla}{Definition: \textsc{Rohal}-Negentropie $R(\textbf{E})$}
 Durch die Funktion $X: \Omega\to\R: \omega\mapsto A(\{\omega\})$ ist eine reellwertige Zufallsvariable gegeben. Sei \textbf{E} ein Ereignis.
 \begin{equation}
-R(\textbf{E}) := -k_\text{R}*\int_\textbf{E} X\td I
+R(\textbf{E}) := k_\text{R}*\int_\textbf{E} X\td I
 \end{equation}
 heißt \emph{\textsc{Rohal}-Negentropie} von \textbf{E}. Hierbei bezeichne $k_\text{R}$ die \textsc{Rohal}-Konstante.
 \end{bla}
