@@ -3,13 +3,13 @@
 \section{Mathematische Betrachtung der Dimensionen}
 Die sieben Dimensionen - drei Raumachsen sowie je eine Zeit-, Kausal-, Sphären- und Globulenachse - sind hinlänglich bekannt. Diese sollen im Folgenden formalisiert werden.
 \begin{bla}{Raumdimensionen zum Ersten}
-Die drei Dimensionen des Raumes, in dem sich ein Normalsterblicher bewegt, können durch den \textsc{Euklidius}schen Vektorraum $\R^3$ als Koordinatensystem modelliert werden. Im Folgenden beschreiben wir einen Punkt im Raum mit dem Vektor $\vec{r}=(x,y,z)^\top$, wobei $x$, $y$ und $z$ die Koordinaten des Punktes seien.
+Der dreidimensionale Raum, in dem sich ein Normalsterblicher bewegt, ähnelt zwar eher einer 3-Sphäre, ist aber lokal homöomorph zum \textsc{Euklidius}schen Vektorraum $\R^3$ und kann somit lokal als dreiachsiges Koordinatensystem dargestellt werden. Im Folgenden beschreiben wir einen Punkt im Raum mit dem Vektor $\vec{r}=(x,y,z)^\top$, wobei $x$, $y$ und $z$ die Koordinaten des Punktes seien.
 \end{bla}
 \begin{bla}{Zeitliche Dimensionen}
 Die Dimension der gewöhnlichen Zeit wird fortan mit der Koordinate $t\in\R$ beschrieben. Da die nodokausale Richtung nicht nur orthogonal auf die Zeit steht, sondern auch direkt mit ihr zusammenhängt, bietet es sich an, Zeitachse und Kausalitätsachse zu einer Ebene zusammenzufassen. Daraus resultiert die \emph{komplexe Zeit} $T$, die sich schreiben lässt als $T=t+\i\tau$. Somit wird die Koordinate $\tau\in\R$ der Kausalitätsachse als imaginäre Zeit aufgefasst. Dieses Modell mag zunächst seltsam erscheinen, jedoch ergeben sich dadurch praktische Vorteile bei der weiteren mathematischen Behandlung.
 \end{bla}
 \begin{bla}{Raumdimensionen zum Zweiten}
-Auch die orthosphärische und transglobule Dimension können als Raumrichtungen aufgefasst werden, welche von gewöhnlichen Lebewesen i. A. nicht wahrzunehmen sind. Die Koordinate $\mathring{r}$ der Sphärenachse ist äquivalent zu einem Radius, der die Entfernung des jeweiligen Punktes zum Weltenherz beschreibt. Da letzteres unzugänglich, unantastbar und ohne Ausdehnung ist, liegt es nahe, den Halbraum $\R^+=\{\mathring{r}\in\R|\mathring{r}>0\}$ als Sphärenachse einzuführen. Keine Limitation erfährt jedoch die Koordinate $\gamma$ der Globulenachse, welche man also $\R$ beschrieben wird.
+Auch die orthosphärische und transglobule Dimension können als Raumrichtungen aufgefasst werden, welche von gewöhnlichen Lebewesen i. A. nicht wahrzunehmen sind. Die Koordinate $\mathring{r}$ der Sphärenachse ist äquivalent zu einem Radius, der die Entfernung des jeweiligen Punktes zum Weltenherz beschreibt. Da letzteres unzugänglich, unantastbar und ohne Ausdehnung ist, liegt es nahe, den Halbraum $\R^+=\{\mathring{r}\in\R|\mathring{r}>0\}$ als Sphärenachse einzuführen. Keine Limitation erfährt jedoch die Koordinate $\gamma$ der Globulenachse, welche man also mit $\R$ beschreibt.
 \end{bla}
 \begin{bla}{Zusammenfassung des Raums}
 Lässt man die zeitlichen Dimensionen außen vor und betrachtet nur räumliche Dimensionen, so erhält man das kartesische Produkt
@@ -24,4 +24,28 @@ Betrachtet man alle sieben Dimensionen zusammen, erhält man das kartesische Pro
 \K:=\R^3\times\R^+\times\R\times\C=\Sp\times\C
 \end{equation}
 (von aurelianisch \emph{kósmos} = Universum), den \emph{Kosmos}. Er beschreibt alles, was zu jeder Zeit möglich ist.
+\end{bla}
+\begin{bla}{Begriffe}
+Im Folgenden sollen folgende Begriffe einheitlich verwendet werden:
+\begin{itemize}
+\item
+Weg $\vec{s}=(s_1,s_2,s_3,s_4,s_5)^\top$ in $\Sp$, gegeben als Abbildung $\vec{s}: [0,1]\to\Sp$ (oder in Bogenlängenparametrisierung $[0,L]\to\Sp$)
+\item
+Zweidimensionale Fläche $A$ (oder -- eingebettet in mehr Dimensionen -- mit Orientierung: $\vec{A}$)
+\item
+Eindimensionaler Rand $\partial A$ einer Fläche $A$ (auch als Weg zu betrachten)
+\item
+Dreidimensionales Volumen $V$ (oder -- eingebettet in mehr Dimensionen -- mit Orientierung: $\vec{V}$)
+\item
+Zweidimensionale Oberfläche $\partial V$ eines Volumens $V$
+\item
+Vierdimensionales Supervolumen $S$ (oder -- eingebettet in mehr Dimensionen -- mit Orientierung $\vec{S}$)
+\item
+Dreidimensionale Superoberfläche $\partial S$ eines Supervolumens $S$
+\item
+Fünfdimensionales Hypervolumen $H$
+\item
+Vierdimensionale Hyperoberfläche $\partial H$ eines Hypervolumens $H$
+\end{itemize}
+Die Orientierung von Flächen, Volumen und Supervolumen im fünfdimensionalen Raum ist, z. B. bei einer gekrümmten Fläche, nicht zwangsläufig gegeben. Differentielle Flächen-, Volumen- und Supervolumenelemente $\td\vec{A}$, $\td\vec{V}$ und $\td\vec{S}$ besitzen jedoch immer eine Orientierung.
 \end{bla}
