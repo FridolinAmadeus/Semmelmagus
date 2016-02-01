@@ -7,4 +7,4 @@ Empirice magica, Viae mathematicae artis magicae, Metaphysica theoretica, Implic
 
 Wer das liest, ist doof.
 
-Geheiligt sei Angrosch.
+Geheiligt sei ~~Angrosch~~ *Ingerimm*.
